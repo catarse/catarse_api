@@ -1,11 +1,9 @@
 CatarseApi::Engine.routes.draw do
-  api_defaults = { format: :json }
-
-  scope :v1 do
+  scope :v1, module: :v1, defaults: {format: 'json'} do
     scope :me do
-      resources :projects, only: :index, controller: 'me/projects', defaults: api_defaults
+      resources :projects, only: :index, controller: 'me/projects'
     end
 
-    resources :projects, only: [:show], defaults: api_defaults
+    resources :projects, only: [:show]
   end
 end
