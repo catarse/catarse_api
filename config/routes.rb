@@ -6,6 +6,7 @@ CatarseApi::Engine.routes.draw do
 
     resources :projects, only: [:show] do
       resources :rewards, only: [:index], controller: 'projects/rewards'
+      resources :contributions, only: [:index], controller: 'projects/contributions'
     end
   end
 end
