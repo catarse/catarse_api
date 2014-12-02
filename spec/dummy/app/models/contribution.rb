@@ -3,6 +3,10 @@ class Contribution < ActiveRecord::Base
   belongs_to :project
   has_many :payment_notifications
 
+  scope :with_state, -> (state) {
+    where(state: state)
+  }
+
   def confirmed?
     false
   end

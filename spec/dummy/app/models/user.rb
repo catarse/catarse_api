@@ -7,6 +7,12 @@ class User < ActiveRecord::Base
 
   accepts_nested_attributes_for :bank_account
 
+  delegate :display_name, to: :decorator
+
+  def decorator
+    @decorator ||= UserDecorator.new(self)
+  end
+
   def credits
     user_total.present? ? user_total.credits : 0
   end

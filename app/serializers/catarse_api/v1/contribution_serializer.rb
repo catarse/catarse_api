@@ -6,8 +6,7 @@ module CatarseApi
         :name,
         :anonymous,
         :value,
-        :reward_id,
-        :_links
+        :reward_id
 
 
       def name
