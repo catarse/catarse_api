@@ -2,6 +2,7 @@ module CatarseApi
   module V1::Me
     class ProjectsController < CatarseApi::ApplicationController
       SERIALIZER = CatarseApi::V1::ProjectSerializer
+      has_scope :with_state
 
       def index
         respond_with collection,
@@ -11,7 +12,7 @@ module CatarseApi
       protected
 
       def collection
-        @projects ||= current_user.projects
+        @projects ||= apply_scopes(current_user.projects)
       end
 
     end
