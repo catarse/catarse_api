@@ -14,7 +14,7 @@ module CatarseApi
       if user && CatarseApi.secure_compare(user.authentication_token, params[:user_token])
         @signed_user = user
       else
-        raise "need authentication!"
+        render json: { error: "invalid credentials!"}, status: 403
       end
     end
 
