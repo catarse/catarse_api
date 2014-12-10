@@ -5,7 +5,9 @@ module CatarseApi
 
       def _links
         {
-          self: project_url(object)
+          self: project_url(object),
+          rewards: project_rewards_url(object),
+          contributions: project_contributions_url(object)
         }
       end
     end
