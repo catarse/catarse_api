@@ -7,7 +7,7 @@ module CatarseApi
         serialization_scope :current_user
 
         def index
-          respond_with collection,
+          respond_with collection.page(params[:page]).per(200),
             each_serializer: SERIALIZER
         end
 
