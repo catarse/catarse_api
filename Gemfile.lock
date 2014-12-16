@@ -3,6 +3,7 @@ PATH
   specs:
     catarse_api (0.0.1)
       active_model_serializers (= 0.8.0)
+      has_scope
       rails (~> 4.0)
 
 GEM
@@ -53,6 +54,9 @@ GEM
     factory_girl_rails (4.4.1)
       factory_girl (~> 4.4.0)
       railties (>= 3.0.0)
+    has_scope (0.6.0.rc)
+      actionpack (>= 3.2, < 5)
+      activesupport (>= 3.2, < 5)
     hike (1.2.3)
     i18n (0.6.11)
     json (1.8.1)

@@ -6,6 +6,7 @@ module CatarseApi
         :description,
         :maximum_contributions,
         :deliver_estimate,
+        :deliver_at,
         :sold_out?,
         :remaining
 
