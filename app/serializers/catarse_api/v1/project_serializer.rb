@@ -4,7 +4,7 @@ module CatarseApi
       attributes :id, :permalink, :name, :_links, :total_contributions
 
       def total_contributions
-        object.contributions.avaiable_to_count
+        object.contributions.with_state('confirmed')
       end
 
       def _links
