@@ -3,7 +3,8 @@ module CatarseApi
     class AuthenticateUserSerializer < ActiveModel::Serializer
       attributes :display_name,
         :email,
-        :authentication_token
+        :authentication_token,
+        :id
     end
   end
 end
