@@ -7,11 +7,11 @@ require "catarse_api/version"
 Gem::Specification.new do |s|
   s.name        = "catarse_api"
   s.version     = CatarseApi::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of CatarseApi."
-  s.description = "TODO: Description of CatarseApi."
+  s.authors     = ["Ton"]
+  s.email       = ["ton@catarse.me"]
+  s.homepage    = "https://github.com/catarse/catarse_api"
+  s.summary     = "Experimental API"
+  s.description = "Experimental API."
   s.license     = "MIT"
 
   s.files      = `git ls-files`.split($\)
