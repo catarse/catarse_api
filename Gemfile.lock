@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    catarse_api (0.0.1)
+    catarse_api (0.0.2)
       active_model_serializers (= 0.8.0)
       has_scope
       kaminari
